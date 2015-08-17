@@ -1,0 +1,45 @@
+<!-- UPDATE THE DIRECTORY PATHS TO POINT TO THE INCLUDE FILES FOUND IN YOUR AGENCY/HOMEPAGE/  -->
+
+<!-- Second row's content  -->
+<!-- Start Section Topic Four-->
+<div class="row">
+    <div class="large-3 columns">
+        <h2>Sec. Topic Four</h2>
+        <div class="module">
+        <ul class="bulleted-list">
+          <li><a href="#">Item Lorem ipsum dolor </a></li>
+          <li><a href="#">Item Lorem ipsum dolor </a></li>
+          <li><a href="#">Item Lorem ipsum dolor </a></li>
+          <li><a href="#">Item Lorem ipsum dolor </a></li>
+          <li><a href="#">Item Lorem ipsum dolor </a></li>
+          <li><a href="#">Item Lorem ipsum dolor </a></li>
+          <li><a href="#">Item Lorem ipsum dolor </a></li>
+          <li><a href="#">Item Lorem ipsum dolor </a></li>
+         </ul>
+        </div>
+        <h3 class="more"><a href="#">More Topics</a></h3>
+      </div>
+      <!-- End Section Topic Four -->
+      
+      <!-- Start Section Topic Five -->
+      <div class="large-3 columns">
+        <h2>Sec. Topic Five</h2>
+        <div class="module">
+        <ul class="bulleted-list">
+          <li><a href="#">Excepteur sint occaecat cupidatat non</a>: 340,000 as of October 26, 2013</li>
+          <li><a href="#">Velit, sed quia non numquam eius m</a>: 340,000 as of October 26, 2013</li>
+          <li><a href="#">Item Lorem ipsum dolor </a>: 340,000 as of October 26, 2013</li>
+        </ul>
+        </div>
+         <h3 class="more"><a href="#">More Topics</a></h3>
+      </div>
+      <!-- End Section Topic Five -->
+      
+      <!-- Start Section Topic Six-->
+      <div class="large-6 columns">
+        <h2 class="section-topic">Sec. Topic Six</h2>
+        <p><img src="/homepage/agency-template/img/spotlight/img-2-columns.jpg" width="470" height="195" alt="Description Goes Here"></p>
+      </div>
+    <!-- End Section Topic Six -->
+ </div>
+

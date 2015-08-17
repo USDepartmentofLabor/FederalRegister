@@ -1,0 +1,201 @@
+<!-- UPDATE THE DIRECTORY PATHS TO POINT TO THE INCLUDE FILES FOUND IN YOUR AGENCY/HOMEPAGE/  -->
+
+<!-- If you have questions on the megamenu please contact Ed McCarthy -->
+
+ <!-- Start Agency name -->
+ <div class="row">
+    <div class="large-12 columns agency-name">
+      <h2>Put The Agency's Name On This Row</h2>
+    </div>         
+ </div>         
+ <!-- End Agency name -->
+
+
+<!--Start main menu -->
+         <div class="row">
+            <div class="megamenu_container megamenu_dark_bar megamenu_light">
+               <!-- Begin Menu Container -->
+               <ul class="megamenu" role="navigation">
+                  <!-- Begin Mega Menu -->
+                  <li class="megamenu_button"><a href="#">Menu</a></li>
+                 <li class="no-border">
+                 	   <a href="#" class="megamenu_drop">Item One</a>
+                  
+                      <!-- Begin Item -->
+                    <div class="dropdown_6columns dropdown_container">
+                        <!-- Begin Item Container -->
+                       <div class="col_12">
+                           <h3>Sub Header</h3>
+                        </div>
+          				<div class="col_6">
+                           <ul>
+                              <li><a href="#">Sub-Item 1 Dummy Text</a></li>
+                              <li><a href="#">Sub-Item 2 Dummy Text</a></li>
+                              <li><a href="#">Sub-Item 3 Dummy Text</a></li>
+                              <li><a href="#">Sub-Item 4 Dummy Text</a></li>
+                              <li><a href="#">Sub-Item 5 Dummy Text</a></li>                              
+                           </ul>
+                        </div>
+                        <div class="col_6">
+                           <ul class="list">
+                              <li><a href="#">Sub-Item 1 Dummy Text</a></li>
+                              <li><a href="#">Sub-Item 2 Dummy Text</a></li>
+                              <li><a href="#">Sub-Item 3 Dummy Text</a></li>
+                              <li><a href="#">Sub-Item 4 Dummy Text</a></li>
+                              <li><a href="#">Sub-Item 5 Dummy Text</a></li>   
+                           </ul>
+                        </div>
+                     </div>
+                     <!-- End Item Container -->
+                  </li>
+                  <!-- End Item -->
+                  <!-- Item Two-->
+                  <li>
+                     <a href="#" class="megamenu_drop">Item Two</a><!-- Begin Item -->
+                     <div class="dropdown_8columns dropdown_container">
+                        <!-- Begin Item Container -->
+               
+                        <div class="col_6">
+                           
+                     <h3>Sub Header One</h3>
+ 													<ul>
+                              <li><a href="#">Sub-Item 1 Dummy Text Dummy Text</a></li>
+                              <li><a href="#">Sub-Item 2 Dummy Text Dummy Text</a></li>
+                              <li><a href="#">Sub-Item 3 Dummy Text Dummy Text</a></li>
+                              <li><a href="#">Sub-Item 4 Dummy Text Dummy Text</a></li>
+                              <li><a href="#">Sub-Item 5 Dummy Text Dummy Text</a></li>
+                           </ul>
+                           
+                        </div>
+                        <div class="col_6">
+                         <h3>Sub Header Two</h3>
+                           <ul>
+                              <li><a href="#">Sub-Item 1 Dummy Text Dummy Text</a></li>
+                              <li><a href="#">Sub-Item 2 Dummy Text Dummy Text</a></li>
+                              <li><a href="#">Sub-Item 3 Dummy Text Dummy Text</a></li>
+                              <li><a href="#">Sub-Item 4 Dummy Text Dummy Text</a></li>
+                              <li><a href="#">Sub-Item 5 Dummy Text Dummy Text</a></li>
+                           </ul>
+                        </div>
+                     </div>
+                     <!-- End Item container -->
+                  </li>
+                  <!-- End Item -->
+                  <!-- Item Three -->
+                  <li>
+                     <a href="#" class="megamenu_drop">Item Three</a><!-- Begin Item -->
+                     <div class="dropdown_8columns dropdown_container">
+                        <!-- Begin Item Container -->
+                        <div class="col_4">
+                           <h3>Sub Header One</h3>
+                           <ul>
+                              <li><a href="#">Sub Item 1 Dummy Text</a></li>
+                              <li><a href="#">Sub Item 2 Dummy Text</a></li>
+                              <li><a href="#">Sub Item 3 Dummy Text</a></li>
+                              <li><a href="#">Sub Item 4 Dummy Text</a></li>
+                              <li><a href="#">Sub Item 5 Dummy Text</a></li>                               
+                           </ul>
+                        </div>
+                        
+                        <div class="col_8">
+                           <h3>Sub Header Two</h3>
+                           
+                           <!--If you plan on using an image you must point to the file in your agency's directory-->
+                           
+                           <img src="/homepage/agency-template/img/img-fpo.jpg" width="100" height="118" alt="Decscription Goes Here" class="img_right">
+                           
+                           <p>Brief Sentence can be here...Can put image in this drop down menu </p>
+                           <ul>
+                              <li><a href="#">Sub-Item Dummy Text Dummy Text</a></li>
+                              <li><a href="#">Sub-Item Dummy Text Dummy Text</a></li>
+                              <li><a href="#">Sub-Item Dummy Text Dummy Text</a></li>
+                           </ul>
+                        </div>
+                     </div>
+                     <!-- End Item container -->
+                 </li>
+                  <!-- End Item -->
+                  <!-- Item Four -->
+                  <li>
+                     <a href="#" class="megamenu_drop">Item Four</a><!-- Begin Item -->
+                     <div class="dropdown_fullwidth dropdown_container">
+                        <!-- Begin Item Container -->
+                        <div class="col_6">
+                           <h3>Sub Header One</h3>
+                           <ul>
+                              <li>This can be a sentence with a <a href="#">hyperlink</a></li>
+                              <li><a href="#">Sub-Item Dummy Text Dummy Text</a></li>
+                              <li><a href="#">Sub-Item Dummy Text Dummy Text</a></li>
+                              <li><a href="#">Sub-Item Dummy Text Dummy Text</a></li>
+                              <li><a href="#">Sub-Item Dummy Text Dummy Text</a></li>
+                              <li><a href="#">Sub-Item Dummy Text Dummy Text</a></li>
+                           </ul>
+                        </div>
+                        <div class="col_6">
+                           <h3>Sub Header Two</h3>
+                           <ul>
+                              <li><a href="#">Sub-Item Dummy Text Dummy Text Text Dummy Text</a></li>
+                              <li><a href="#">Sub-Item Dummy Text Dummy Text Text Dummy Text</a></li>
+
+                           </ul>
+                           <h3>Sub Header Three</h3>
+                           <ul>
+                              <li><a href="#">Sub-Item Dummy Text Dummy Text Text Dummy Text</a></li>
+                              <li><a href="#">Sub-Item Dummy Text Dummy Text Text Dummy Text</a></li>
+                           </ul>
+                        </div>
+                     </div>
+                     <!-- End Item container -->
+                  </li>
+                  <!-- End Item -->
+                  <!-- Calender -->
+                  <li>
+                      <a href="#" class="megamenu_drop">Item Five</a><!-- Begin Item -->
+                  <div class="dropdown_4columns dropdown_container">
+                        <!-- Begin Item Five-->
+                        <div class="col_12">
+                           <h3>Sub Header</h3>
+                        <ul> 
+                        	<li><a href="#">Sub-Item Dummy Text Dummy Text</a></li>
+                          <li><a href="#">Sub-Item Dummy Text Dummy Text</a></li>
+                          <li><a href="#">Sub-Item Dummy Text Dummy Text</a></li>
+                          <li><a href="#">Sub-Item Dummy Text Dummy Text</a></li>
+                          <li><a href="#">Sub-Item Dummy Text Dummy Text</a></li>
+                          <li><a href="#">Sub-Item Dummy Text Dummy Text</a></li>
+                        </ul>
+                        </div>
+                       
+                    </div>
+                     <!-- End Item container -->
+                  </li>
+                  <!-- End Item -->
+                  <!-- Item Six -->
+                  <li><!--USE class="no_megamenu_drop"  IF NO DROPDOWN MENU -->
+                      <a href="#" class="no_megamenu_drop">Item Six</a><!-- Begin Item -->
+                  <!--<div class="dropdown_3columns dropdown_container">
+                        <!-- Begin Item Container -->
+                         <!--<div class="col_12">                           
+                        <ul>
+                            <li><a href="#">Keep Them Short</a></li>
+                            <li><a href="#">On The Last Column</a></li>
+                            <li><a href="#">Sub-Item Dummy Text</a></li>
+                            <li><a href="#">Sub-Item Dummy Text</a></li>
+                            <li><a href="#">Sub-Item Dummy Text</a></li>
+                            <li><a href="#">Sub-Item Dummy Text</a></li>
+                         </ul>
+                        </div>
+                       
+                    </div>-->
+                     <!-- End Item container -->
+                  </li>
+                  <!-- End Item -->
+               </ul>
+               <!-- End Mega Menu -->
+            </div>
+            <!-- End Menu Container -->
+         </div>
+         <!--End main menu --> 
+ 
+ <!--DO NOT REMOVE: Skip to main content-->      
+ <div id="content" role="main"> <a name="maincontent" tabindex="-1"></a></div>
+ <!--DO NOT REMOVE: Skip to main content-->  
