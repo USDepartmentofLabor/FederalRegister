@@ -32,6 +32,5 @@ class MY_Loader extends CI_Loader
 		$this->view($template. '/header', $vars);
 		$this->view($template. '/' . $template_name, $vars);
 		$this->view($template. '/footer', $vars);
-
 	}
 }
