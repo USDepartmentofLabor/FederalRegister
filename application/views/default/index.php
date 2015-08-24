@@ -17,7 +17,7 @@
 				    	<li><a href="#">Notices</a></li>
 				    	<li><a href="#">Meetings</a></li>
 				    </ul>
-				    <li><a href="#">Agency</a></li>
+				    <li><?php echo anchor("index/agency", "Agency", "title='Agency'"); ?></li>
 				    <li><a href="#">Date</a></li>
 				</ul>
 			</div>	
