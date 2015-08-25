@@ -12,7 +12,7 @@
 				<ul class="bulleted-list">
 				    <li>Type</li>
 				    <ul>
-				    	<li><a href="#">Proposed Rules</a></li>
+				    	<li><?php echo anchor("index/document_type/PRORULE", "Proposed Rules", "title='Proposed Rules'"); ?></li>
 				    	<li><a href="#">Final Rules</a></li>
 				    	<li><a href="#">Notices</a></li>
 				    	<li><a href="#">Meetings</a></li>

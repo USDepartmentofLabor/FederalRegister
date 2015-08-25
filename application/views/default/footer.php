@@ -2,7 +2,7 @@
 <!-- Start Footer One -->
 <div role="contentinfo">
 <div class="row footer-one">
-  <div class="large-5 columns hide-for-small"> <a href="/"> <img src="http://dolcontentdev.opadev.dol.gov/homepage/img/dol-logo-white.png" alt="U.S.Department of Labor"/> <span class="header-logo-type-white">UNITED STATES <br>
+  <div class="large-5 columns hide-for-small"> <a href="/"> <img src="http://www.dol.gov/homepage/img/dol-logo-white.png" alt="U.S.Department of Labor"/> <span class="header-logo-type-white">UNITED STATES <br>
     DEPARTMENT OF LABOR </span> </a> </div>
   <div class="large-3 columns">
     <p class="footer-info1 a-bottom"><a href="/dol/jobs.htm">Career</a> & <a href="/oasam/programs/internship/index.htm">Internships</a> | <a href="/dol/contact/">Contact Us </a></p>
@@ -80,13 +80,13 @@
 				 <!--End Footer --> 
 
 				 <!--Start Bottom's JavaScripts--> 
-       	 <!--<script src="http://dolcontentdev.opadev.dol.gov/homepage/js/foundation/foundation.js"></script>-->
-<script src="http://dolcontentdev.opadev.dol.gov/homepage/js/foundation.min.js"></script>
+       	 <!--<script src="http://www.dol.gov/homepage/js/foundation/foundation.js"></script>-->
+<script src="http://www.dol.gov/homepage/js/foundation.min.js"></script>
 <script>
     $(document).foundation();
 </script>
 <!-- Never remove this: Resolved IE 8 issue on grids of the CSS Frameworks-->
-<script src="http://dolcontentdev.opadev.dol.gov/homepage/js/rem.min.js" type="text/javascript"></script>
+<script src="http://www.dol.gov/homepage/js/rem.min.js" type="text/javascript"></script>
 <!-- Never remove above line -->
 
 

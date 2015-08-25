@@ -7,12 +7,13 @@
     <title><?php echo $title;?></title>
     <meta name="description" content="DOL">   <!-- Use no more than 200 characters. This short line of text will appear 1-on-1 in the search results. Create and add a different meta description tag for every page.-->   
 	<!--- Start CSS and JavaScript -->  
+	<script src="<?php echo base_url("assets/js/jquery-1.11.3.min.js"); ?>"></script>
 	<!-- css -->
-    <link rel="stylesheet" href="http://dolcontentdev.opadev.dol.gov/homepage/css/foundation.css" />
-    <link rel="stylesheet" href="http://dolcontentdev.opadev.dol.gov/homepage/css/megamenu.css" />
-    <link rel="stylesheet" href="http://dolcontentdev.opadev.dol.gov/homepage/css/dol-style.css" />
+    <link rel="stylesheet" href="http://www.dol.gov/homepage/css/foundation.css" />
+    <link rel="stylesheet" href="http://www.dol.gov/homepage/css/megamenu.css" />
+    <link rel="stylesheet" href="http://www.dol.gov/homepage/css/dol-style.css" />
           
-    <script src="http://dolcontentdev.opadev.dol.gov/homepage/js/modernizr.js"></script>
+    <script src="http://www.dol.gov/homepage/js/modernizr.js"></script>
     <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
     <script src="//s3.amazonaws.com/nwapi/nwmatcher/nwmatcher-1.2.5-min.js"></script>
@@ -20,7 +21,7 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.1.0/respond.min.js"></script>
     <![endif]-->
       
-    <script type="text/javascript" src="http://dolcontentdev.opadev.dol.gov/homepage/js/scripts.js"></script><!-- Scripts for the dropdown megamenu and flexslider -->
+    <script type="text/javascript" src="http://www.dol.gov/homepage/js/scripts.js"></script><!-- Scripts for the dropdown megamenu and flexslider -->
     
 	<!--- End  CSS and JavaScript -->  
         
@@ -88,7 +89,7 @@
             </div>
             <div class="small-2 columns">
               <input type="hidden" name="affiliate" value="u.s.departmentoflabor">
-              <input type="image"  src="http://dolcontentdev.opadev.dol.gov/homepage/img/icon-search.png"  vspace="4"  alt="Search DOL" class="usagov-submit">
+              <input type="image"  src="http://www.dol.gov/homepage/img/icon-search.png"  vspace="4"  alt="Search DOL" class="usagov-submit">
             </div>
           </form>
         </div>
@@ -266,7 +267,7 @@
                         
                         <div class="col_7">
                            <h3>Meet the Secretary</h3>
-                           <img src="http://dolcontentdev.opadev.dol.gov/homepage/img/parez-sml-photo.jpg" width="100" height="118" alt="Thomas E. Perez" class="img_right">
+                           <img src="http://www.dol.gov/homepage/img/parez-sml-photo.jpg" width="100" height="118" alt="Thomas E. Perez" class="img_right">
                            <p>Thomas E. Perez was nominated by President Obama to serve as the nation's 26th Secretary of Labor, and was sworn in on July 23, 2013...</p>
                            <ul>
                               <li><a href="/_sec/">The Secretary's Page</a></li>
