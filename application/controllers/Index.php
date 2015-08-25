@@ -54,6 +54,33 @@ class Index extends CI_Controller
 		$this->load->template("agency", $this->data);
 	}
 	
+	public function doc_by_agency($type)
+	{
+		$useragent = $_SERVER['HTTP_USER_AGENT'];
+		$rest_server = REST_SERVER;
+		$get_url = "https://{$rest_server}/agencies";
+			
+		// call curl private method for processing request
+		$response = $this->curl_call($get_url, $useragent);
+	
+		// Execute - returns response
+		if(!empty($response))
+		{
+			//$json_string = json_decode(json_encode($response, JSON_PRETTY_PRINT));
+			//$json_string = $this->pretty_print($response);
+			$json = json_decode($response, TRUE);
+				
+			$this->data['agency_list'] = $json;
+		}
+		else
+		{
+			echo 'Failed to retrieve data';
+		}
+		
+		$this->data['doc_type'] = $type;
+		$this->load->template("doc_agency", $this->data);
+	}
+	
 	// browse agency by document list
 	public function document_list($id)
 	{
@@ -105,11 +132,11 @@ class Index extends CI_Controller
 	}
 	
 	// view agency by document type
-	public function document_type($doc_type)
+	public function document_type($id, $type)
 	{
 		$useragent = $_SERVER['HTTP_USER_AGENT'];
 		$rest_server = REST_SERVER;
-		$get_url = "https://{$rest_server}/articles.json?fields%5B%5D=agencies&fields%5B%5D=agency_names&fields%5B%5D=document_number&fields%5B%5D=pdf_url&order=relevance&conditions%5Bagencies%5D%5B%5D=labor-department&conditions%5Bagencies%5D%5B%5D=labor-statistics-bureau&conditions%5Btype%5D%5B%5D={$doc_type}&order=newest";
+		$get_url = "https://{$rest_server}/articles?conditions%5Bagency_ids%5D%5B%5D={$id}&order=newest";
 			
 		// call curl private method for processing request
 		$response = $this->curl_call($get_url, $useragent);
@@ -148,8 +175,9 @@ class Index extends CI_Controller
 	
 		$this->data["results"] = $this->data['document'];
 		$str_links = $this->pagination->create_links();
-		$this->data["links"] = explode('&nbsp;',$str_links );
-	
+		$this->data["links"] = explode('&nbsp;',$str_links ); 
+		$this->data['doc_type'] = $type;
+		
 		$this->load->template("document_type", $this->data);
 	}	
 	

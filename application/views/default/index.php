@@ -12,10 +12,10 @@
 				<ul class="bulleted-list">
 				    <li>Type</li>
 				    <ul>
-				    	<li><?php echo anchor("index/document_type/PRORULE", "Proposed Rules", "title='Proposed Rules'"); ?></li>
-				    	<li><a href="#">Final Rules</a></li>
-				    	<li><a href="#">Notices</a></li>
-				    	<li><a href="#">Meetings</a></li>
+				    	<li><?php echo anchor("index/doc_by_agency/PRORULE", "Proposed Rules", "title='Proposed Rules'"); ?></li>
+				    	<li><?php echo anchor("index/doc_by_agency/RULE", "Final Rules", "title='Final Rules'"); ?></li>
+				    	<li><?php echo anchor("index/doc_by_agency/NOTICE", "Notices", "title='Notices'"); ?></li>
+				    	<li><?php echo anchor("index/doc_by_agency/PRESDOCU", "Presidential Document", "title='Presidential Document'"); ?></li>
 				    </ul>
 				    <li><?php echo anchor("index/agency", "Agency", "title='Agency'"); ?></li>
 				    <li><a href="#">Date</a></li>

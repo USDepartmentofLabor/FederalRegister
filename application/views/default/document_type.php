@@ -6,31 +6,43 @@
 		<div class="large-12 columns">
 			<div class="module">
 				<?php
-				echo "<h3><strong>{$document['description']}</strong></h3>";
+				echo "<h3><strong>".$document['description']."</strong></h3>";
+
+				$start_yr = "1994";
+				$end_yr = date("Y");
+				$years = range($end_yr, $start_yr);
 				
-				//$agency_list['results'] = array_map("unserialize", array_unique(array_map("serialize", $agency_list['results'])));
-				foreach ($document['results'] as $string)
+				foreach ($years as $key => $year)
 				{
-					foreach ($string['agencies'] as $agency)
+					echo "<strong>{$year}</strong><br><br>";
+					
+					foreach ($document['results'] as $string)
 					{
-						if (!isset($agency['parent_id']) == "271" || !isset($agency['id']) == "271")
+						//$public_date = new DateTime($string['publication_date']);
+						//$public_date->format("Y");
+						
+						$public_date = DateTime::createFromFormat('Y-m-d', $string['publication_date'])->format("Y");
+						
+						//echo $public_date."<br><br>"; exit;
+						if ($public_date == $year && $string['type'] == $doc_type)
 						{
-							//$short_name = $string['agency_names'];
-							foreach ($string['agency_names'] as $agency_name)
-							{
-								//echo $agency_name;
-								if ($agency_name != "Labor Department")
-								{
-									echo anchor("{$string['pdf_url']}", "{$agency_name}", "title=".$agency_name."") . " (Doc No. - {$string['document_number']}) " ."<br/><br/>";
-								}
-								
-							}
-							//echo $string['description']."<br/><br/>";
-						}
+							//echo $public_date."<br>";
+							echo "<ul>";
+							echo "<li>{$string['publication_date']} - <strong>{$string['type']}</strong> - <a href=\"{$string['pdf_url']}\">{$string['title']}</a></li>";
+							echo "</ul>";
+						}	
 					}
 				}
+
 				?>
-			</div>	
+			</div>
+			<!-- Show pagination links -->
+			<?php
+			foreach ($links as $link)
+			{
+				echo "<li>". $link."</li>";
+			}
+			?>
 		</div>
 <!-- End End Blog -->
 </div>
