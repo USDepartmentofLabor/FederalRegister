@@ -83,7 +83,7 @@ $autoload['drivers'] = array('cache');
 |
 |	$autoload['helper'] = array('url', 'file');
 */
-$autoload['helper'] = array('url', 'form','cookie');
+$autoload['helper'] = array('url', 'form','cookie', 'html');
 
 /*
 | -------------------------------------------------------------------

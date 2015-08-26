@@ -4,8 +4,8 @@
 <!-- Start Blog -->
 <div class="row">
 	<h2><?php echo $subtitle; ?></h2>
-		<div class="large-6 columns">
-			
+		<div class="large-12 columns">
+			<?php echo anchor($this->uri->segment(1), "Index", "title='Index'"); echo br(2);?>
 			<h3><?php echo $browse_doc; ?></h3>
 		
 			<div class="module">

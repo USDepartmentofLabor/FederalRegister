@@ -4,6 +4,7 @@
 <div class="row">
 	<h2><?php echo $browse_agency ." - ". $doc_type; ?></h2>
 		<div class="large-12 columns">
+		<?php echo anchor($this->uri->segment(1), "Index", "title='Index'"); echo br(2);?>
 			<div class="module">
 				<?php
 				// validate document type
