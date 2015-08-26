@@ -76,8 +76,10 @@ class Index extends CI_Controller
 		{
 			echo 'Failed to retrieve data';
 		}
+
+		// validate document type
+		$this->data['doc_type'] = $this->rule_type($type);
 		
-		$this->data['doc_type'] = $type;
 		$this->load->template("doc_agency", $this->data);
 	}
 	
@@ -152,7 +154,7 @@ class Index extends CI_Controller
 		}
 	
 		$config = array();
-		$config["base_url"] = base_url("index/document_type/{$doc_type}/");
+		$config["base_url"] = base_url("index/document_type/{$type}/");
 		$total_row = count($this->data['document']);
 		$config["total_rows"] = $total_row;
 		$config["per_page"] = 1;
@@ -175,11 +177,36 @@ class Index extends CI_Controller
 	
 		$this->data["results"] = $this->data['document'];
 		$str_links = $this->pagination->create_links();
-		$this->data["links"] = explode('&nbsp;',$str_links ); 
-		$this->data['doc_type'] = $type;
+		$this->data["links"] = explode('&nbsp;',$str_links );
+		
+		// validate document type		
+		$this->data['doc_type'] = $this->rule_type($type);
 		
 		$this->load->template("document_type", $this->data);
-	}	
+	}
+	
+	private function rule_type($type)
+	{
+		// validate document type
+		if ($type == "NOTICE")
+		{
+			$rule_type = "Notice";
+		}
+		if ($type == "PRORULE")
+		{
+			$rule_type = "Proposed Rule";
+		}
+		if ($type == "RULE")
+		{
+			$rule_type = "Final Rule";
+		}
+		if ($type == "PRESDOCU")
+		{
+			$rule_type = "Presidential Document";
+		}
+	
+		return $rule_type;
+	}
 	
 	// curl call
 	private function curl_call($get_url, $useragent)
