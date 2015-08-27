@@ -21,6 +21,7 @@ class Index extends CI_Controller
 		$this->data['subtitle'] = "Register Documents";
 		$this->data['browse_doc'] = "Browse all documents by:";
 		$this->data['browse_agency'] = "Federal Register Documents by Agency";
+		$this->data['doc_by_date'] = "Federal Register Documents by Date";
 	}
 	
 	public function index()
@@ -183,6 +184,81 @@ class Index extends CI_Controller
 		$this->data['doc_type'] = $this->rule_type($type);
 		
 		$this->load->template("document_type", $this->data);
+	}
+	
+	// browse agency document by date
+	public function document_by_date()
+	{
+		//$get_url = "https://{$rest_server}/articles.json?fields%5B%5D=agencies&fields%5B%5D=agency_names&fields%5B%5D=pdf_url&fields%5B%5D=publication_date&fields%5B%5D=raw_text_url&fields%5B%5D=title&fields%5B%5D=type&order=newest&conditions%5Bpublication_date%5D%5Byear%5D=2015&conditions%5Bagencies%5D%5B%5D=labor-department&conditions%5Bagencies%5D%5B%5D=labor-statistics-bureau";
+		$start_yr = "1994";
+		$end_yr = date("Y");
+		$years = range($end_yr, $start_yr);
+		
+		foreach ($years as $year)
+		{
+			$useragent = $_SERVER['HTTP_USER_AGENT'];
+			$rest_server = REST_SERVER;
+			$get_url = "https://{$rest_server}/articles.json?conditions%5Bagencies%5D%5B%5D=labor-department&conditions%5Bagencies%5D%5B%5D=labor-statistics-bureau&conditions%5Bpublication_date%5D%5Byear%5D={$year}&fields%5B%5D=agencies&fields%5B%5D=agency_names&fields%5B%5D=pdf_url&fields%5B%5D=publication_date&fields%5B%5D=raw_text_url&fields%5B%5D=title&fields%5B%5D=type&order=newest&page=2";
+			
+			$response = $this->curl_call($get_url, $useragent);
+			$json = array();
+			$json = json_decode($response, TRUE);
+			$this->data['year_range'] = $json;
+			
+			$this->data['year'] = "<strong>$year</strong>" . br(2);
+			
+			foreach ($json['results'] as $string)
+			{
+				$dte  = $string['publication_date'];
+				$dt   = new DateTime();
+				$published_date = $dt->createFromFormat('Y-m-d', $dte);
+
+				foreach ($string['agencies'] as $agency)
+				{
+					if ($agency['raw_name'] != "DEPARTMENT OF LABOR")
+					{
+						$this->data['list_doc'] = "<ul>
+						<li>{$published_date->format("m/d/Y")} - <strong>{$string['type']}</strong> - <strong>{$agency['raw_name']}</strong> - <a href=\"{$string['pdf_url']}\">{$string['title']}</a> [<a href=\"{$string['pdf_url']}\" target=\"_tops\"><strong>PDF</strong></a>] [<a href=\"{$string['raw_text_url']}\" target=\"_tops\"><strong>Text</strong></a>]</li>
+						</ul>";
+					}
+
+				}
+			}
+		}
+		
+/* 		$useragent = $_SERVER['HTTP_USER_AGENT'];
+		$rest_server = REST_SERVER;
+		$get_url = "https://{$rest_server}/articles.json?fields%5B%5D=agencies&fields%5B%5D=publication_date&order=newest&conditions%5Bpublication_date%5D%5Byear%5D=2015&conditions%5Bagencies%5D%5B%5D=labor-department&conditions%5Bagencies%5D%5B%5D=labor-statistics-bureau";
+		
+		// call curl private method for processing request
+		$response = $this->curl_call($get_url, $useragent);
+		$json = json_decode($response, TRUE);
+		$this->data['document'] = $json;
+ */				
+		$this->load->template("document_by_date", $this->data);
+	}
+	
+	public function get_document_year($year)
+	{		
+		$date_regex = '/^(19|20)\d\d$/';
+		
+		if (!preg_match($date_regex, $year))
+		{
+			$this->data['invalid_date'] = "Invalid year specified";
+		}
+		else
+		{
+			$useragent = $_SERVER['HTTP_USER_AGENT'];
+			$rest_server = REST_SERVER;
+			$get_url = "https://{$rest_server}/articles.json?fields%5B%5D=agencies&fields%5B%5D=agency_names&fields%5B%5D=pdf_url&fields%5B%5D=publication_date&fields%5B%5D=raw_text_url&fields%5B%5D=title&fields%5B%5D=type&order=newest&conditions%5Bpublication_date%5D%5Byear%5D={$year}&conditions%5Bagencies%5D%5B%5D=labor-department&conditions%5Bagencies%5D%5B%5D=labor-statistics-bureau";
+				
+			// call curl private method for processing request
+			$response = $this->curl_call($get_url, $useragent);
+			$json = json_decode($response, TRUE);
+			$this->data['document'] = $json;
+		}
+		
+		$this->load->template("get_document_year", $this->data);
 	}
 	
 	private function rule_type($type)

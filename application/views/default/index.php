@@ -18,7 +18,7 @@
 				    	<li><?php echo anchor("index/doc_by_agency/PRESDOCU", "Presidential Document", "title='Presidential Document'"); ?></li>
 				    </ul>
 				    <li><?php echo anchor("index/agency", "Agency", "title='Agency'"); ?></li>
-				    <li><a href="#">Date</a></li>
+				    <li><?php echo anchor("index/document_by_date", "Date", "title='Date'"); ?></li>
 				</ul>
 			</div>	
 		</div>
