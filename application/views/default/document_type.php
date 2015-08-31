@@ -37,13 +37,6 @@
 
 				?>
 			</div>
-			<!-- Show pagination links -->
-			<?php
-			foreach ($links as $link)
-			{
-				echo "<li>". $link."</li>";
-			}
-			?>
 		</div>
 <!-- End End Blog -->
 </div>

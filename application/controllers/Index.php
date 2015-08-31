@@ -177,6 +177,12 @@ class Index extends CI_Controller
 		$this->load->template("document_by_date", $this->data);
 	}
 	
+	// browse agency document by date
+	public function document_by_month()
+	{
+		$this->load->template("document_by_month", $this->data);
+	}
+	
 	public function get_document_year($year)
 	{		
 		$date_regex = '/^(19|20)\d\d$/';
