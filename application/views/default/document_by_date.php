@@ -7,48 +7,54 @@
 		<?php echo anchor($this->uri->segment(1), "Index", "title='Index'"); echo br(2);?>
 			<div class="module">
 				<?php
-				//echo "<h3><strong>".$document['description']."</strong></h3>";
-				echo $year;
-				echo $list_doc;
-/* 				foreach ($year_range['results'] as $string)
-				{
-					$dte  = $string['publication_date'];
-					$dt   = new DateTime();
-					$published_date = $dt->createFromFormat('Y-m-d', $dte);
+			
+					$start_yr = "1994";
+					$end_yr = date("Y");
+					$years = range($end_yr, $start_yr);
 					
-					echo $published_date->format('Y') . br(2);
-				}
-				
-	 */			
-				
-/* 				$start_yr = "1994";
-				$end_yr = date("Y");
-				$years = range($end_yr, $start_yr);
-				
-				foreach ($years as $key => $year)
-				{
-					echo "<strong>" . anchor("index/get_document_year/{$year}", "{$year}", "title='{$year}'"). "</strong><br><br>";
-					
-					foreach ($document['results'] as $string)
+					foreach ($years as $year)
 					{
-						$dte  = $string['publication_date'];
-						$dt   = new DateTime();
-						$published_date = $dt->createFromFormat('Y-m-d', $dte);
+						$useragent = $_SERVER['HTTP_USER_AGENT'];
+						$rest_server = REST_SERVER;
+						$get_url = "https://{$rest_server}/articles.json?conditions%5Bagencies%5D%5B%5D=labor-department&conditions%5Bagencies%5D%5B%5D=labor-statistics-bureau&conditions%5Bpublication_date%5D%5Byear%5D={$year}&fields%5B%5D=agencies&fields%5B%5D=agency_names&fields%5B%5D=pdf_url&fields%5B%5D=publication_date&fields%5B%5D=raw_text_url&fields%5B%5D=title&fields%5B%5D=type&order=newest&page=2";
 						
-						//$public_date = new DateTime($string['publication_date']);
-						//$public_date->format("Y");
+						$ch = curl_init();
+						curl_setopt_array($ch, array(
+						CURLOPT_RETURNTRANSFER => TRUE,
+						CURLOPT_URL => $get_url,
+						CURLOPT_USERAGENT => $useragent,
+						CURLOPT_RETURNTRANSFER => TRUE,
+						CURLOPT_SSL_VERIFYHOST => FALSE,
+						CURLOPT_SSL_VERIFYPEER => TRUE // set to TRUE on QA and Prod
+						));
 						
-						//echo $public_date."<br><br>"; exit;
-						if ($published_date->format('Y') == $year)
+						$response = curl_exec($ch);
+			
+						$json = array();
+						$json = json_decode($response, TRUE);
+						
+						echo "<strong>$year</strong>" . br(2);
+
+						foreach ($json['results'] as $string)
 						{
-							echo $published_date->format('Y') . br(2);
-							//echo "<ul>";
-							//echo "<li>{$string['publication_date']} - <strong>{$string['type']}</strong> - <a href=\"{$string['pdf_url']}\">{$string['title']}</a></li>";
-							//echo "</ul>";
-						}	
+							
+							$dte  = $string['publication_date'];
+							$dt   = new DateTime();
+							$published_date = $dt->createFromFormat('Y-m-d', $dte);
+			
+							foreach ($string['agencies'] as $agency)
+							{
+								if ($agency['raw_name'] != "DEPARTMENT OF LABOR")
+								{
+									echo "<ul>";
+									echo "<li><strong>{$published_date->format("m/d/Y")}</strong> - <strong>{$string['type']}</strong> - <strong>{$agency['raw_name']}</strong> - <a href=\"{$string['pdf_url']}\">{$string['title']}</a> [<a href=\"{$string['pdf_url']}\" target=\"_tops\"><strong>PDF</strong></a>] [<a href=\"{$string['raw_text_url']}\" target=\"_tops\"><strong>Text</strong></a>]</li>";
+									echo "</ul>";
+								}
+			
+							}
+							
+						}
 					}
-				}
- */
 				?>
 			</div>
 		</div>

@@ -10,6 +10,7 @@
 				//echo "<h3><strong>{$browse_agency}</strong></h3>";
 				
 				//$agency_list['results'] = array_map("unserialize", array_unique(array_map("serialize", $agency_list['results'])));
+				asort($agency_list);
 				foreach ($agency_list as $string)
 				{
 					if ($string['parent_id'] == "271")
