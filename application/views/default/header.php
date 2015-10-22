@@ -9,9 +9,11 @@
 	<!--- Start CSS and JavaScript -->  
 	<script src="<?php echo base_url("assets/js/jquery-1.11.3.min.js"); ?>"></script>
 	<!-- css -->
-    <link rel="stylesheet" href="http://www.dol.gov/homepage/css/foundation.css" />
-    <link rel="stylesheet" href="http://www.dol.gov/homepage/css/megamenu.css" />
-    <link rel="stylesheet" href="http://www.dol.gov/homepage/css/dol-style.css" />
+	<?php 
+	echo link_tag('assets/css/foundation.css'); 
+	echo link_tag('assets/css/megamenu.css'); 
+	echo link_tag('assets/css/dol-style.css'); 
+	?>
           
     <script src="http://www.dol.gov/homepage/js/modernizr.js"></script>
     <!--[if lt IE 9]>
