@@ -94,7 +94,7 @@ h1.header-logo-type {
 	text-decoration:underline !important;
 }
 .brand {
-	background: url('/homepage/img/logo.png') no-repeat;
+	background: url('homepage/img/logo.png') no-repeat;
 	cursor: pointer;
 	float: left;
 	height: 70px;
@@ -451,7 +451,7 @@ h1.header-logo-type {
 	margin-top: 15px!important;
 }
 .brand {
- background: url("/homepage/img/logo-m.png") no-repeat;
+ background: url("<?php echo base_url('homepage/img/logo-m.png'); ?> no-repeat;
  cursor: pointer;
  float: left;
  height: 60px;
@@ -473,7 +473,7 @@ h1.header-logo-type {
  margin-top: 10px!important;
 }
  .brand {
- background: url("/homepage/img/logo-s.png") no-repeat;
+ background: url("homepage/img/logo-s.png") no-repeat;
  cursor: pointer;
  float: left;
  height: 50px;
@@ -564,7 +564,7 @@ h1.header-logo-type {
  margin-bottom: 10px;
 }
 .brand {
- background: url("/homepage/img/logo-s.png") no-repeat;
+ background: url("/homepage/img/logo.png") no-repeat;
  cursor: pointer;
  float: left;
  text-indent: -9999em;

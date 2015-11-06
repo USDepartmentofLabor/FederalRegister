@@ -69,7 +69,7 @@
 <!--Start Banner --> 
 <a name="top"></a>
 <div class="row top-header" role="banner">
-      <div class="large-6 columns"> <a href="/"> <span class="brand"></span>
+      <div class="large-6 columns"> <a href="<?php echo base_url(); ?>"> <span class="brand"></span>
         <h1 class="header-logo-type">UNITED STATES <br>
           DEPARTMENT OF LABOR </h1>
         </a> </div>
