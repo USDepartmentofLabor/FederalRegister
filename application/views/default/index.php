@@ -15,7 +15,6 @@
 				    	<li><?php echo anchor("index/doc_by_agency/PRORULE", "Proposed Rules", "title='Proposed Rules'"); ?></li>
 				    	<li><?php echo anchor("index/doc_by_agency/RULE", "Final Rules", "title='Final Rules'"); ?></li>
 				    	<li><?php echo anchor("index/doc_by_agency/NOTICE", "Notices", "title='Notices'"); ?></li>
-				    	<li><?php echo anchor("index/doc_by_agency/PRESDOCU", "Presidential Document", "title='Presidential Document'"); ?></li>
 				    </ul>
 				    <li><?php echo anchor("index/agency", "Agency", "title='Agency'"); ?></li>
 				    <li><?php echo anchor("index/document_by_date", "Date", "title='Date'"); ?></li>

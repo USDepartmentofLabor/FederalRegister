@@ -18,7 +18,7 @@ class Index extends CI_Controller
 		parent::__construct();
 		
 		$this->data['title'] = "U.S. Department of Labor";
-		$this->data['subtitle'] = "Register Documents";
+		$this->data['subtitle'] = "Federal Register Documents";
 		$this->data['browse_doc'] = "Browse all documents by:";
 		$this->data['browse_agency'] = "Federal Register Documents by Agency";
 		$this->data['doc_by_date'] = "Federal Register Documents by Date";
@@ -221,11 +221,12 @@ class Index extends CI_Controller
 		{
 			$rule_type = "Final Rule";
 		}
+		/* HIDDEN FOR NOW
 		if ($type == "PRESDOCU")
 		{
 			$rule_type = "Presidential Document";
 		}
-	
+		*/
 		return $rule_type;
 	}
 	
