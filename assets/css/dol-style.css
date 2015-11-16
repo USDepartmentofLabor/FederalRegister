@@ -303,7 +303,7 @@ ul.bulleted-list li {
 	float: right;
 }
 .sm-facebook, .sm-twitter, .sm-instagram, .sm-rss, .sm-rss-btm, .sm-email, .sm-email-btm, .sm-in, .sm-gplus  {
-	background-image:url(/homepage/img/icons-social-media-group.png);
+	background-image:url('homepage/img/icons-social-media-group.png');
 	float: left;
 	margin: 20px 0 20px 0;
 	overflow: hidden;
