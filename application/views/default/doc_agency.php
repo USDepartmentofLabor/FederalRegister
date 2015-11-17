@@ -32,6 +32,10 @@
 					if ($string['parent_id'] == "271")
 					{
 						$short_name = $string['short_name'];
+						// Data owner will be informed of agency misspelling. 
+						if($short_name == 'LMSO'){
+						  $short_name = 'OLMS';
+						}						
 						echo anchor("index/document_type/{$string['id']}/{$rule_type}", "{$short_name}", "title=".$short_name."")."<br/><br/>";
 						//echo $string['description']."<br/><br/>";
 					}
